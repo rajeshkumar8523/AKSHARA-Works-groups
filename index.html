@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aksshara Work Groups</title>
+    <style>
+       body {
+            background-color: #FAF7F4; /* Light background */
+            color: #333; /* Text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #9C2D41;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        header img {
+            width: 100px;
+            border-radius: 50%;
+        }
+        nav {
+            background-color: #CB857C;
+            padding: 10px;
+            text-align: right;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color:  #9C2D41;
+        }
+        section {
+            padding: 20px;
+        }
+        h2, h3 {
+            color: #9C2D41;
+            text-align: center;
+            margin-bottom: 30px; /* Adds 2 lines of space below the heading */
+        }
+        .carousel {
+            position: relative;
+            max-width: 500px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-images img {
+            width: 500px;
+            height: 300px;
+             margin-bottom: 40px;
+        }
+        .carousel-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dot {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #CB857C; /* Inactive dot color */
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #9C2D41; /* Active dot color */
+        }
+        button {
+            background-color: #9C2D41;
+            color: white;
+            padding: 10px 20px;
+            border: center;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 50px; /* Adds 2 lines of space below the heading */
+        }
+        button:hover {
+            background-color: #CB857C;
+        }
+        footer {
+            background-color: #9c2d41;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+             margin-bottom: 40px;
+        }
+        .info-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            background-color: #F6CBB7;
+        }
+        .info-section div {
+            width: 30%;
+            background-color: #FAF7F4;
+            padding: 20px;
+            border: 1px solid #CB857C;
+            text-align: center;
+        }
+        .info-section div button {
+            display: block;
+            margin: auto;
+        }
+         .contact-section {
+        background-color: #A28089;
+        padding: 30px;
+    }
+    .profiles-row {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .profile-details {
+        background-color: #FAF7F4;
+        padding: 20px;
+        border: 1px solid #CB857C;
+        width: 30%;
+    }
+    .contact-img {
+        width: 100px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .contact-button {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .contact-button button {
+        background-color: #9C2D41;
+            color: white;
+            padding: 10px 20px;
+            border: center;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 50px; 
+    }
+    .contact-button button:hover {
+        background-color: #CB857C;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/WhatsApp%20Image%202024-10-09%20at%2010.01.15%20PM.jpeg" alt="Aksshara Logo">
+        <h1>AKSSHARA  WORK  GROUPS</h1>
+        <p>Your trusted partner for comprehensive solutions</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#managing directors">Managint directors</a>
+        <a href="#about-us">About us</a>
+    </nav>
+
+    <section id="home">
+        <h2> WELCOME TO AKSSHARA WORK GROUPS</h2>
+        <p>Welcome to Aksshara Work Groups—your trusted partner for comprehensive solutions in three vital areas:</p>
+          
+             <li><strong>Labor Management</strong>: We streamline workforce operations, enhancing efficiency and productivity for businesses of all sizes.</li> 
+             <li><strong>Ambulance Service</strong>: Our 24/7 emergency ambulance service ensures rapid, reliable medical response when it matters most.</li>
+    <li><strong>Biomass Briquettes</strong>: We offer eco-friendly biomass briquettes, providing a sustainable energy alternative that reduces carbon footprints.</li>
+         
+    </section>
+
+    <section id="services">
+        <h2>WHY CHOOSE US?</h2>
+ 
+        <h3>1. Labor Management</h3>
+        <div class="carousel">
+            <div class="carousel-images" id="carouselImagesLabor">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/lb2.jpg" alt="Labor Management Image 1">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/lb3.webp" alt="Labor Management Image 2">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/lb1.jpg" alt="Labor Management Image 3">
+            </div>
+        </div>
+        <div class="carousel-dots" id="carouselDotsLabor"></div>
+        <p>Boost efficiency, reduce costs, and manage your workforce effortlessly, Our labor management system offers seamless solutions </p>
+        </p>for tracking attendance, scheduling shifts, and monitoring performance, helping you optimize operations and improve productivity.</p>
+        <button>See More</button>
+
+        <h3>2. Ambulance Service</h3>
+        <div class="carousel">
+            <div class="carousel-images" id="carouselImagesAmbulance">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/am2.jpg" alt="Ambulance Service Image 1">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/am3.jpg" alt="Ambulance Service Image 2">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/am1.webp" alt="Ambulance Service Image 3">
+            </div>
+        </div>
+        <div class="carousel-dots" id="carouselDotsAmbulance"></div>
+        <p>Rapid response, reliable care, anytime. Our 24/7 ambulance service is equipped with cutting-edge medical </p>
+        </p> equipment and skilled professionals, ensuring timely medical support when it matters the most.</p>
+        <button>See More</button>
+
+        <h3>3. Biomass Briquettes</h3>
+        <div class="carousel">
+            <div class="carousel-images" id="carouselImagesBiomass">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/bb2.jpg" alt="Biomass Briquettes Image 1">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/bb3.jpg" alt="Biomass Briquettes Image 2">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/bb1.jpg" alt="Biomass Briquettes Image 3">
+            </div>
+        </div>
+        <div class="carousel-dots" id="carouselDotsBiomass"></div>
+        <p>Eco-friendly energy for a sustainable future. Our biomass briquettes are made from renewable materials, offering a cleaner,.</p>
+        </p> greener alternative to conventional fuels. Reduce emissions and lower energy costs with our efficient, high-quality briquettes.</p>
+        <button>See More</button>
+         
+    </section>
+
+    <section class="contact-section" id="managing-directors">
+        <h2>MANAGING DIRECTORS</h2>
+        <div class="profiles-row">
+            <!-- Profile 1: P. Venkatesh -->
+            <div class="profile-details">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42upg95bt/ak5.jpeg" alt="P. Venkatesh" class="contact-img">
+                <h3>P. Venkatesh</h3>
+            </div>
+            <!-- Profile 2: G. Venkatesh -->
+            <div class="profile-details">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42upg95bt/ak5.jpeg" alt="G. Venkatesh" class="contact-img">
+                <h3>G. Venkatesh</h3>
+            </div>
+            <!-- Profile 3: Y. Rameshwari -->
+            <div class="profile-details">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42upg95bt/ak5.jpeg" alt="Y. Rameshwari" class="contact-img">
+                <h3>Y. Rameshwari</h3>
+            </div>
+        </div>
+        <div class="contact-button">
+            <button onclick="window.location.href='#contact'">Contact Us</button>
+        </div>
+    </section>
+    
+    <section id=" LOCATION">
+       <h3> LOCATION</h3>
+        <p>Flat No. 1-29/51, Club Road, Ayodhya Nagar, Road No. 4, Jadcherla, Mahabubnagar, Telangana - 509301, India.</p>
+        <iframe src="https://maps.google.com/maps?q=Flat%20No.%201-29/51%20Club%20Road,%20Ayodhya%20Nagar,%20Road%20No.%204,%20Jadcherla,%20Mahabubnagar,%20Telangana%20-%20509301,%20India&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+ <div class="info-section">
+        <div id="privacy">
+            <h2>Privacy Policy</h2>
+            <p>At AKSSHARA WORK GROUPS, we prioritize your privacy. Our policy outlines how we collect, use, and protect your personal information.</p>
+            <button>Read More</button>
+        </div>
+        <div id="faq">
+            <h2>FAQ</h2>
+            <p>Find answers to common questions regarding our services, policies, and more.</p>
+            <button>Read  More</button>
+        </div>
+        <div id="terms">
+            <h2>Terms and Conditions</h2>
+            <p>Review the terms and conditions of using our services and website.</p>
+            <button>Read  More</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Follow us on <a href="#">Instagram</a> and <a href="#">Facebook</a></p>
+        <footer>
+        <p>&copy; 2024 Aksshara Work Groups. All Rights Reserved.</p>
+          <P>powered by vspaze technologies<P>
+    </footer>
+    <script>
+        // Labor Management Carousel
+        let currentIndexLabor = 0;
+        const imagesLabor = document.querySelectorAll('#carouselImagesLabor img');
+        const dotsContainerLabor = document.getElementById('carouselDotsLabor');
+
+        imagesLabor.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => {
+                currentIndexLabor = index;
+                updateCarouselLabor();
+            });
+            dotsContainerLabor.appendChild(dot);
+        });
+
+        function updateCarouselLabor() {
+            const offset = -currentIndexLabor * 100;
+            document.getElementById('carouselImagesLabor').style.transform = `translateX(${offset}%)`;
+            document.querySelectorAll('#carouselDotsLabor .dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndexLabor);
+            });
+        }
+
+        function autoSlideLabor() {
+            currentIndexLabor = (currentIndexLabor + 1) % imagesLabor.length;
+            updateCarouselLabor();
+        }
+
+        setInterval(autoSlideLabor, 3000);
+        updateCarouselLabor();
+
+        // Similar auto-slide functions for Ambulance and Biomass Briquettes
+        let currentIndexAmbulance = 0;
+        const imagesAmbulance = document.querySelectorAll('#carouselImagesAmbulance img');
+        const dotsContainerAmbulance = document.getElementById('carouselDotsAmbulance');
+
+        imagesAmbulance.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => {
+                currentIndexAmbulance = index;
+                updateCarouselAmbulance();
+            });
+            dotsContainerAmbulance.appendChild(dot);
+        });
+
+        function updateCarouselAmbulance() {
+            const offset = -currentIndexAmbulance * 100;
+            document.getElementById('carouselImagesAmbulance').style.transform = `translateX(${offset}%)`;
+            document.querySelectorAll('#carouselDotsAmbulance .dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndexAmbulance);
+            });
+        }
+
+        function autoSlideAmbulance() {
+            currentIndexAmbulance = (currentIndexAmbulance + 1) % imagesAmbulance.length;
+            updateCarouselAmbulance();
+        }
+
+        setInterval(autoSlideAmbulance, 3000);
+        updateCarouselAmbulance();
+
+        // Biomass Briquettes Carousel
+        let currentIndexBiomass = 0;
+        const imagesBiomass = document.querySelectorAll('#carouselImagesBiomass img');
+        const dotsContainerBiomass = document.getElementById('carouselDotsBiomass');
+
+        imagesBiomass.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => {
+                currentIndexBiomass = index;
+                updateCarouselBiomass();
+            });
+            dotsContainerBiomass.appendChild(dot);
+        });
+
+        function updateCarouselBiomass() {
+            const offset = -currentIndexBiomass * 100;
+            document.getElementById('carouselImagesBiomass').style.transform = `translateX(${offset}%)`;
+            document.querySelectorAll('#carouselDotsBiomass .dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndexBiomass);
+            });
+        }
+
+        function autoSlideBiomass() {
+            currentIndexBiomass = (currentIndexBiomass + 1) % imagesBiomass.length;
+            updateCarouselBiomass();
+        }
+
+        setInterval(autoSlideBiomass, 3000);
+        updateCarouselBiomass();
+
+    
+</script>
+</body>
+</html>
