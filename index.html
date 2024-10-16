@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aksshara Work Groups</title>
+    <title>Akshara Work Groups</title>
     <style>
-       body {
-            background-color: #FAF7F4; /* Light background */
-            color: #333; /* Text color */
+       body { 
+            background-color:#ffffff;  /* Light background */
+            color: #000000; /* Text color */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
         }
         header {
-            background-color: #9C2D41;
+            background-color: #006171;
             color: white;
             padding: 15px;
             text-align: center;
@@ -24,7 +24,7 @@
             border-radius: 50%;
         }
         nav {
-            background-color: #CB857C;
+            background-color: #437375;
             padding: 10px;
             text-align: right;
         }
@@ -35,22 +35,85 @@
             font-weight: bold;
         }
         nav a:hover {
-            color:  #9C2D41;
+            color:  #000000;
+        }
+          /* Dropdown container */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Clickable link for dropdown */
+        .dropdown .dropdown-link {
+            cursor: pointer;
+            color: white;
+            padding: 5px 5px; /* Padding remains the same */
+            font-weight: bold; /* Bold text */
+            font-size: 16px; /* Small font size for dropdown link */
+            text-decoration: none;
+        }
+
+        /* Hover effect on dropdown link */
+        .dropdown .dropdown-link:hover {
+            color: #000000; /* Black on hover */
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            center: -2px; /* Align dropdown content to the center*/
+            background-color: #006171; /* Background color */
+            min-width: 200px;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            z-index: 1;
+            padding: 10px 0;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 10px 15px; /* Adjusted padding */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 12px; /* Small font size for dropdown links */
+            border-radius: 8px; /* Rounded corners for links */
+        }
+
+        /* Hover effect on dropdown links */
+        .dropdown-content a:hover {
+            background-color: #437375; /* Hover background */
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         section {
             padding: 20px;
         }
-        h2, h3 {
-            color: #9C2D41;
-            text-align: center;
-            margin-bottom: 30px; /* Adds 2 lines of space below the heading */
-        }
+        h2 {
+    color: #006171; /* Color for h2 */
+    text-align: center;
+    margin-bottom: 30px; /* Adds space below the heading */
+      }
+
+     h3 {
+    color: #000000; /* Color for h3 */
+    text-align: center;
+    margin-bottom: 30px; /* Adds space below the heading */
+       } 
+       
         .carousel {
             position: relative;
             max-width: 500px;
             margin: auto;
             overflow: hidden;
             border-radius: 10px;
+            border: 2px solid #006171; /* Dark Teal border color */
         }
         .carousel-images {
             display: flex;
@@ -64,21 +127,22 @@
         .carousel-dots {
             text-align: center;
             margin-top: 10px;
+            color: #000000;
         }
         .dot {
             display: inline-block;
             height: 10px;
             width: 10px;
             margin: 0 2px;
-            background-color: #CB857C; /* Inactive dot color */
+            background-color: #006171; /* Inactive dot color */
             border-radius: 50%;
             cursor: pointer;
         }
         .dot.active {
-            background-color: #9C2D41; /* Active dot color */
+            background-color: #000000; /* Active dot color */
         }
         button {
-            background-color: #9C2D41;
+            background-color: #437375;
             color: white;
             padding: 10px 20px;
             border: center;
@@ -87,11 +151,11 @@
             margin-bottom: 50px; /* Adds 2 lines of space below the heading */
         }
         button:hover {
-            background-color: #CB857C;
+            background-color: #006171;
         }
         footer {
-            background-color: #9c2d41;
-            padding: 20px;
+            background-color: #006171;
+            padding: 15px;
             text-align: center;
             color: white;
         }
@@ -99,79 +163,100 @@
             width: 100%;
             height: 300px;
              margin-bottom: 40px;
+             border-radius: 8px; /* Optional: rounded corners for the iframe */
+             border: 2px solid #006171; /* Dark Teal border color */
+             
         }
         .info-section {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px 0;
-            background-color: #F6CBB7;
-        }
-        .info-section div {
-            width: 30%;
-            background-color: #FAF7F4;
-            padding: 20px;
-            border: 1px solid #CB857C;
-            text-align: center;
-        }
-        .info-section div button {
-            display: block;
-            margin: auto;
-        }
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.info-section div {
+    width: 30%;
+    background-color: rgba(250, 247, 244, 0.8); /* Semi-transparent background for each info block */
+    padding: 20px;
+    border: 1px solid rgba(203, 133, 124, 0.7); /* Slightly transparent border */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners for each info block */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for each info block */
+}
+
+.info-section div button {
+    display: block;
+    margin: auto;
+}
+
+        
          .contact-section {
-        background-color: #A28089;
+        background-color: #ffffff; ;
         padding: 30px;
-    }
-    .profiles-row {
-        display: flex;
-        justify-content: space-around;
-        text-align: center;
-    }
+        }
+         .profiles-row {
+         display: flex;
+         justify-content: space-around;
+         width: 100%;
+         gap: 20px; /* Space between the profiles */
+         padding: 20px;
+         background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+         border-radius: 12px; /* Rounded corners for a more glassy look */
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow to lift the element */
+          backdrop-filter: blur(10px); /* Frosted glass effect */
+         -webkit-backdrop-filter: blur(10px); /* For Safari */
+        border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for emphasis */
+        }
+
     .profile-details {
-        background-color: #FAF7F4;
-        padding: 20px;
-        border: 1px solid #CB857C;
-        width: 30%;
-    }
+    flex-basis: 45%; /* Controls the width of each profile */
+    background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent background for each profile */
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Slightly transparent border */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow inside each profile */
+     }
+
+    
     .contact-img {
         width: 100px;
         border-radius: 50%;
         margin-bottom: 20px;
     }
-    .contact-button {
-        text-align: center;
-        margin-top: 20px;
-    }
-    .contact-button button {
-        background-color: #9C2D41;
-            color: white;
-            padding: 10px 20px;
-            border: center;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-bottom: 50px; 
-    }
-    .contact-button button:hover {
-        background-color: #CB857C;
-    }
+    
+     
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/WhatsApp%20Image%202024-10-09%20at%2010.01.15%20PM.jpeg" alt="Aksshara Logo">
-        <h1>AKSSHARA  WORK  GROUPS</h1>
+    <header>  
+        <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/WhatsApp%20Image%202024-10-09%20at%2010.01.15%20PM.jpeg" alt="Akshara Logo">
+        <h1>AKSHARA  WORK  GROUPS</h1>
         <p>Your trusted partner for comprehensive solutions</p>
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#managing directors">Managint directors</a>
-        <a href="#about-us">About us</a>
+        <a href="file:///C:/Users/ADMIN/Desktop/aksshara/index.html"traget="_blank">Home</a>
+         <!-- Dropdown for Services -->
+    <div class="dropdown">
+        <a class="dropdown-link">Services</a>
+        <div class="dropdown-content">
+            <a href="file:///C:/Users/ADMIN/Desktop/aksshara/lab.html">Labor Management</a>
+            <a href="file:///C:/Users/ADMIN/Desktop/aksshara/amb.html">Ambulance Service</a>
+            <a href="file:///C:/Users/ADMIN/Desktop/aksshara/bb.html">Biomass Briquettes</a>
+        </div>
+    </div>
+        <a href="#contact us">Contact Us</a>
+        <a href="file:///C:/Users/ADMIN/Desktop/aksshara/aboutus.html"traget="_blank">About us</a>
     </nav>
 
     <section id="home">
-        <h2> WELCOME TO AKSSHARA WORK GROUPS</h2>
-        <p>Welcome to Aksshara Work Groups—your trusted partner for comprehensive solutions in three vital areas:</p>
+        <h2> WELCOME TO AKSHARA WORK GROUPS</h2>
+        <p>Welcome to Akshara Work Groups—your trusted partner for comprehensive solutions in three vital areas:</p>
           
              <li><strong>Labor Management</strong>: We streamline workforce operations, enhancing efficiency and productivity for businesses of all sizes.</li> 
              <li><strong>Ambulance Service</strong>: Our 24/7 emergency ambulance service ensures rapid, reliable medical response when it matters most.</li>
@@ -182,7 +267,7 @@
     <section id="services">
         <h2>WHY CHOOSE US?</h2>
  
-        <h3>1. Labor Management</h3>
+        <h3> Labor Management</h3>
         <div class="carousel">
             <div class="carousel-images" id="carouselImagesLabor">
                 <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/lb2.jpg" alt="Labor Management Image 1">
@@ -193,9 +278,9 @@
         <div class="carousel-dots" id="carouselDotsLabor"></div>
         <p>Boost efficiency, reduce costs, and manage your workforce effortlessly, Our labor management system offers seamless solutions </p>
         </p>for tracking attendance, scheduling shifts, and monitoring performance, helping you optimize operations and improve productivity.</p>
-        <button>See More</button>
+        <button onclick="openNewPage1()">Lets See</button>
 
-        <h3>2. Ambulance Service</h3>
+        <h3> Ambulance Service</h3>
         <div class="carousel">
             <div class="carousel-images" id="carouselImagesAmbulance">
                 <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/am2.jpg" alt="Ambulance Service Image 1">
@@ -206,9 +291,9 @@
         <div class="carousel-dots" id="carouselDotsAmbulance"></div>
         <p>Rapid response, reliable care, anytime. Our 24/7 ambulance service is equipped with cutting-edge medical </p>
         </p> equipment and skilled professionals, ensuring timely medical support when it matters the most.</p>
-        <button>See More</button>
+        <button onclick="openNewPage2()">Lets See</button>
 
-        <h3>3. Biomass Briquettes</h3>
+        <h3> Biomass Briquettes</h3>
         <div class="carousel">
             <div class="carousel-images" id="carouselImagesBiomass">
                 <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/bb2.jpg" alt="Biomass Briquettes Image 1">
@@ -219,8 +304,7 @@
         <div class="carousel-dots" id="carouselDotsBiomass"></div>
         <p>Eco-friendly energy for a sustainable future. Our biomass briquettes are made from renewable materials, offering a cleaner,.</p>
         </p> greener alternative to conventional fuels. Reduce emissions and lower energy costs with our efficient, high-quality briquettes.</p>
-        <button>See More</button>
-         
+        <button onclick="openNewPage3()">Lets See</button>
     </section>
 
     <section class="contact-section" id="managing-directors">
@@ -228,7 +312,7 @@
         <div class="profiles-row">
             <!-- Profile 1: P. Venkatesh -->
             <div class="profile-details">
-                <img src="https://assets.onecompiler.app/42ucesb3u/42upg95bt/ak5.jpeg" alt="P. Venkatesh" class="contact-img">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42v68ufa5/WhatsApp%20Image%202024-10-12%20at%201.15.35%20PM.jpeg" alt="P. Venkatesh" class="contact-img">
                 <h3>P. Venkatesh</h3>
             </div>
             <!-- Profile 2: G. Venkatesh -->
@@ -238,37 +322,34 @@
             </div>
             <!-- Profile 3: Y. Rameshwari -->
             <div class="profile-details">
-                <img src="https://assets.onecompiler.app/42ucesb3u/42upg95bt/ak5.jpeg" alt="Y. Rameshwari" class="contact-img">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42v68ufa5/WhatsApp%20Image%202024-10-12%20at%201.17.47%20PM.jpeg" alt="Y. Rameshwari" class="contact-img">
                 <h3>Y. Rameshwari</h3>
             </div>
         </div>
-        <div class="contact-button">
-            <button onclick="window.location.href='#contact'">Contact Us</button>
-        </div>
+         
     </section>
     
     <section id=" LOCATION">
-       <h3> LOCATION</h3>
+       <h2> LOCATION</h2>
         <p>Flat No. 1-29/51, Club Road, Ayodhya Nagar, Road No. 4, Jadcherla, Mahabubnagar, Telangana - 509301, India.</p>
         <iframe src="https://maps.google.com/maps?q=Flat%20No.%201-29/51%20Club%20Road,%20Ayodhya%20Nagar,%20Road%20No.%204,%20Jadcherla,%20Mahabubnagar,%20Telangana%20-%20509301,%20India&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
  <div class="info-section">
         <div id="privacy">
             <h2>Privacy Policy</h2>
-            <p>At AKSSHARA WORK GROUPS, we prioritize your privacy. Our policy outlines how we collect, use, and protect your personal information.</p>
-            <button>Read More</button>
+            <p> We prioritize your privacy and protect your personal information.</p>
+            <button onclick="openNewPage4()">⋙</button>
         </div>
         <div id="faq">
             <h2>FAQ</h2>
             <p>Find answers to common questions regarding our services, policies, and more.</p>
-            <button>Read  More</button>
+            <button onclick="openNewPage5()">⋙</button>
         </div>
         <div id="terms">
             <h2>Terms and Conditions</h2>
             <p>Review the terms and conditions of using our services and website.</p>
-            <button>Read  More</button>
+            <button onclick="openNewPage6()">⋙</button>
         </div>
     </div>
-
     <footer>
         <p>Follow us on <a href="#">Instagram</a> and <a href="#">Facebook</a></p>
         <footer>
@@ -303,7 +384,9 @@
             currentIndexLabor = (currentIndexLabor + 1) % imagesLabor.length;
             updateCarouselLabor();
         }
-
+        function openNewPage1() {
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/lab.html"; // Replace with the desired URL
+        }
         setInterval(autoSlideLabor, 3000);
         updateCarouselLabor();
 
@@ -334,7 +417,10 @@
             currentIndexAmbulance = (currentIndexAmbulance + 1) % imagesAmbulance.length;
             updateCarouselAmbulance();
         }
-
+        function openNewPage2() {
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/amb.html"; // Replace with the desired URL
+             
+        }
         setInterval(autoSlideAmbulance, 3000);
         updateCarouselAmbulance();
 
@@ -365,11 +451,22 @@
             currentIndexBiomass = (currentIndexBiomass + 1) % imagesBiomass.length;
             updateCarouselBiomass();
         }
-
+        function openNewPage3() {
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/bb.html"; // Replace with the desired URL
+        }
         setInterval(autoSlideBiomass, 3000);
         updateCarouselBiomass();
-
-    
+        // info section
+        function openNewPage4() {
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/p.html"; // Replace with the desired URL
+        }
+        function openNewPage5() {
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/f.html"; // Replace with the desired URL
+        }
+        function openNewPage6() {
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/tc.html"; // Replace with the desired URL
+        }
+         
 </script>
 </body>
 </html>

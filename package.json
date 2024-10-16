@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "firebase": "^10.14.1",
+    "npm": "^10.9.0",
+    "serve": "^14.2.3"
+  },
+  "name": "aksshara",
+  "version": "1.0.0",
+  "main": "index.js",
+  
+    "scripts": {
+      "build": "react-scripts build"
+    }
+  
+  ,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
