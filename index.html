@@ -240,18 +240,18 @@
     </header>
 
     <nav>
-        <a href="file:///C:/Users/ADMIN/Desktop/aksshara/index.html"traget="_blank">Home</a>
+        <a href="file:///C:/Users/ADMIN/Desktop/akshara/index.html"traget="_blank">Home</a>
          <!-- Dropdown for Services -->
     <div class="dropdown">
         <a class="dropdown-link">Services</a>
         <div class="dropdown-content">
-            <a href="file:///C:/Users/ADMIN/Desktop/aksshara/lab.html">Labor Management</a>
-            <a href="file:///C:/Users/ADMIN/Desktop/aksshara/amb.html">Ambulance Service</a>
-            <a href="file:///C:/Users/ADMIN/Desktop/aksshara/bb.html">Biomass Briquettes</a>
+            <a href="file:///C:/Users/ADMIN/Desktop/akshara/labor.html">Labor Management</a>
+            <a href="file:///C:/Users/ADMIN/Desktop/akshara/ambulance.html">Ambulance Service</a>
+            <a href="file:///C:/Users/ADMIN/Desktop/akshara/biomass.html">Biomass Briquettes</a>
         </div>
     </div>
         <a href="#contact us">Contact Us</a>
-        <a href="file:///C:/Users/ADMIN/Desktop/aksshara/aboutus.html"traget="_blank">About us</a> 
+        <a href="file:///C:/Users/ADMIN/Desktop/akshara/about.html"traget="_blank">About us</a>
     </nav>
 
     <section id="home">
@@ -374,7 +374,7 @@
 
         function updateCarouselLabor() {
             const offset = -currentIndexLabor * 100;
-            document.getElementById('carouselImagesLabor').style.transform = `translateX(${offset}%)`;
+            document.getElementById('carouselImagesLabor').style.transform = translateX(`${offset}%`);
             document.querySelectorAll('#carouselDotsLabor .dot').forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentIndexLabor);
             });
@@ -385,7 +385,7 @@
             updateCarouselLabor();
         }
         function openNewPage1() {
-            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/lab.html"; // Replace with the desired URL
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/akshara/labor.html"; // Replace with the desired URL
         }
         setInterval(autoSlideLabor, 3000);
         updateCarouselLabor();
@@ -407,7 +407,7 @@
 
         function updateCarouselAmbulance() {
             const offset = -currentIndexAmbulance * 100;
-            document.getElementById('carouselImagesAmbulance').style.transform = `translateX(${offset}%)`;
+            document.getElementById('carouselImagesAmbulance').style.transform = translateX(`${offset}%`);
             document.querySelectorAll('#carouselDotsAmbulance .dot').forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentIndexAmbulance);
             });
@@ -418,7 +418,7 @@
             updateCarouselAmbulance();
         }
         function openNewPage2() {
-            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/amb.html"; // Replace with the desired URL
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/akshara/ambulance.html"; // Replace with the desired URL
              
         }
         setInterval(autoSlideAmbulance, 3000);
@@ -441,7 +441,7 @@
 
         function updateCarouselBiomass() {
             const offset = -currentIndexBiomass * 100;
-            document.getElementById('carouselImagesBiomass').style.transform = `translateX(${offset}%)`;
+            document.getElementById('carouselImagesBiomass').style.transform = translateX(`${offset}%`);
             document.querySelectorAll('#carouselDotsBiomass .dot').forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentIndexBiomass);
             });
@@ -452,19 +452,19 @@
             updateCarouselBiomass();
         }
         function openNewPage3() {
-            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/bb.html"; // Replace with the desired URL
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/akshara/biomass.html"; // Replace with the desired URL
         }
         setInterval(autoSlideBiomass, 3000);
         updateCarouselBiomass();
         // info section
         function openNewPage4() {
-            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/p.html"; // Replace with the desired URL
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/akshara/privacy.html"; // Replace with the desired URL
         }
         function openNewPage5() {
-            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/f.html"; // Replace with the desired URL
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/akshara/faq.html"; // Replace with the desired URL
         }
         function openNewPage6() {
-            window.location.href = "file:///C:/Users/ADMIN/Desktop/aksshara/tc.html"; // Replace with the desired URL
+            window.location.href = "file:///C:/Users/ADMIN/Desktop/akshara/terms.html"; // Replace with the desired URL
         }
          
 </script>
