@@ -1,10 +1,6 @@
 {
   "hosting": {
-<<<<<<< HEAD
-    "public": "build",
-=======
     "public": "public",
->>>>>>> 9de4d9e (Initial Files)
     "ignore": [
       "firebase.json",
       "**/.*",
