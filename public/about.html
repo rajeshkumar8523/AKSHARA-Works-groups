@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us - Akshara Work Groups</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding:0;
+            background-color: #f7f8fa;
+        }
+        header {
+            background-color: #006171;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        header img {
+            width: 100px;
+            border-radius: 50%;
+        }
+        nav {
+            background-color: #437375;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 5px;
+        }
+        nav a:hover {
+            color:  #000000;
+        }
+           /* Dropdown container */
+           .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Clickable link for dropdown */
+        .dropdown .dropdown-link {
+            cursor: pointer;
+            color: white;
+            padding: 5px 5px; /* Padding remains the same */
+            font-weight: bold; /* Bold text */
+            font-size: 16px; /* Small font size for dropdown link */
+            text-decoration: none;
+        }
+
+        /* Hover effect on dropdown link */
+        .dropdown .dropdown-link:hover {
+            color: #000000; /* Black on hover */
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            
+            background-color: #006171; /* Background color */
+            min-width: 200px;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            z-index: 1;
+            padding: 10px 0;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 10px 15px; /* Adjusted padding */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 12px; /* Small font size for dropdown links */
+            border-radius: 8px; /* Rounded corners for links */
+        }
+
+        /* Hover effect on dropdown links */
+        .dropdown-content a:hover {
+            background-color: #437375; /* Hover background */
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+          /* Style for the floating WhatsApp button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      cursor: pointer;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+      width: 50%;
+      height: 50%;
+    }
+        section {
+            padding: 20px;
+        }
+           
+        footer {
+            background-color: #006171;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+         /* Style for the scroll-up button */
+    #scrollUpButton {
+      position: fixed;
+      bottom: 130px;
+      right: 20px;
+      display: none;
+      width: 50px;
+      height: 50px;
+      background-color: #006171;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      transition: background-color 0.3s;
+    }
+
+    #scrollUpButton:hover {
+      background-color: #437375;
+    }
+        @media only screen and (max-width: 768px) {
+        header {
+            background-color: #006171;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+        }
+        header img {
+            width: 70px;
+            border-radius: 50%;
+             
+        }
+        nav {
+            background-color: #437375;
+            padding: 8px;
+            text-align: center;
+           
+        }
+        nav a {
+            color: white;
+            margin: 0 1px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            padding: 5px 5px;
+        }
+        nav a:hover {
+            color:  #000000;
+        }
+          /* Dropdown container */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Clickable link for dropdown */
+        .dropdown .dropdown-link {
+            cursor: pointer;
+            color: white;
+            padding: 5px 5px; /* Padding remains the same */
+            font-weight: bold; /* Bold text */
+            font-size: 13px; /* Small font size for dropdown link */
+            text-decoration: none;
+        }
+
+        /* Hover effect on dropdown link */
+        .dropdown .dropdown-link:hover {
+            color: #000000; /* Black on hover */
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+             
+            background-color: #006171; /* Background color */
+            min-width: 170px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            z-index: 1;
+            padding: 5px 0;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 5px 10px; /* Adjusted padding */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 13px; /* Small font size for dropdown links */
+            border-radius: 8px; /* Rounded corners for links */
+        }
+
+        /* Hover effect on dropdown links */
+        .dropdown-content a:hover {
+            background-color: #437375; /* Hover background */
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+                 /* Style for the floating WhatsApp button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      cursor: pointer;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+      width: 50%;
+      height: 50%;
+    }
+        footer {
+            background-color: #006171;
+            padding: 5px;
+            font-size: 10px;
+            text-align: center;
+            color: white;
+            width: auto;
+        }
+        #scrollUpButton {
+      position: fixed;
+      bottom: 70px;
+      right: 5px;
+      display: none;
+      width: 30px;
+      height: 30px;
+      background-color: #006171;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      transition: background-color 0.3s;
+    }
+
+    #scrollUpButton:hover {
+      background-color: #437375;
+    }
+    }
+    </style>
+</head>
+<body>
+    <header>  
+        <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/WhatsApp%20Image%202024-10-09%20at%2010.01.15%20PM.jpeg" alt="Akshara Logo">
+        <h1>AKSHARA  WORK  GROUPS</h1>
+        <p>Your trusted partner for comprehensive solutions</p>
+    </header>
+
+
+    <nav>
+        <a href="index.html">Home</a>
+           <!-- Dropdown for Services -->
+    <div class="dropdown">
+        <a class="dropdown-link">Services</a>
+        <div class="dropdown-content">
+            <a href="biomass.html">Biomass Briquettes</a>
+            <a href="labor.html">Labor Management</a>
+            <a href="ambulance.html">Ambulance Service</a>
+             
+        </div>
+    </div>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About us</a>
+    </nav>
+    <!-- WhatsApp Floating Button -->
+  <a
+  href="https://wa.me/918096234645"
+  target="_blank"
+  class="whatsapp-button"
+  title="Chat with us on WhatsApp"
+>
+   <img
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+    alt="WhatsApp"
+  />
+</a>
+    <section id="about" style="background-color: #f7f8fa; padding: 40px; border-radius: 10px; text-align: center; color: #333;">
+        <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/WhatsApp%20Image%202024-10-09%20at%2010.01.15%20PM.jpeg" alt="Akshara Work Groups Logo" style="width: 200px;border-radius: 50%;">
+        
+        <h2 style="color: #006171; font-family: 'Arial', sans-serif; font-size: 36px;">About Us</h2>
+        <p style="font-size: 18px; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+            <strong>Akshara Work Groups</strong> is committed to providing top-notch services in labor management, ambulance services, and biomass briquettes. 
+            Our mission is to support businesses and communities with sustainable, reliable, and efficient services tailored to meet the ever-evolving needs of our clients.
+        </p>
+        <br>
+        <p style="font-size: 18px; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+            With a focus on innovation and customer satisfaction, we pride ourselves on delivering excellence in every aspect of our work. 
+            Whether you are seeking expert labor management solutions, immediate medical assistance through our ambulance services, 
+            or environmentally friendly biomass briquettes, Akshara Work Groups is your trusted partner.
+        </p>
+        <br>
+        <p style="font-size: 18px; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+            Our dedicated team ensures that we are always at the forefront of industry standards, maintaining the highest levels of safety, professionalism, and quality. 
+            Let us help you build a stronger future with our sustainable and innovative solutions.
+        </p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Aksshara Work Groups. All Rights Reserved.</p>
+        <p style="color: white;">Powered by <a href="https://www.instagram.com/vspaze_technologies?igsh=MWR3cnBpOGdpYnRyeA==" target="_blank" style="color: white; text-decoration: none;">vspaze technologies</a></p>
+
+    </footer>
+ <!-- Scroll-Up Button -->
+ <button id="scrollUpButton" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+ <script>
+                // Get the button
+ const scrollUpButton = document.getElementById('scrollUpButton');
+
+// Show the button when scrolling down 100px from the top
+window.onscroll = function() {
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+ scrollUpButton.style.display = 'flex';
+} else {
+ scrollUpButton.style.display = 'none';
+}
+};
+
+// Slow scroll to the top when the button is clicked
+scrollUpButton.onclick = function() {
+const scrollToTop = () => {
+ const position = document.documentElement.scrollTop || document.body.scrollTop;
+ if (position > 0) {
+   window.scrollBy(0, -20); // Adjust this value to control the scrolling speed
+   requestAnimationFrame(scrollToTop);
+ }
+};
+scrollToTop();
+};
+ </script>
+</body>
+</body>
+</html>
