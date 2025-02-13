@@ -1,89 +1,662 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshara Work Groups</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       body { 
+            background-color:#f7f8fa;  /* Light background */
+            color: #000000; /* Text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #006171;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        header img {
+            width: 100px;
+            border-radius: 50%;
+        }
+        nav {
+            background-color: #437375;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 5px;
+            font-size: 16px; /* Small font size for dropdown link */
+        }
+        nav a:hover {
+            color:  #000000;
+        }
+          /* Dropdown container */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.14.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.14.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.14.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.14.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.14.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.14.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.14.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.14.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.14.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.14.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+        /* Clickable link for dropdown */
+        .dropdown .dropdown-link {
+            cursor: pointer;
+            color: white;
+            padding: 5px 5px; /* Padding remains the same */
+            font-weight: bold; /* Bold text */
+            font-size: 16px;  
+            text-decoration: none;
+        }
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
+        /* Hover effect on dropdown link */
+        .dropdown .dropdown-link:hover {
+            color: #000000; /* Black on hover */
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            
+            background-color: #006171; /* Background color */
+            min-width: 200px;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            z-index: 1;
+            padding: 10px 0;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 10px 15px; /* Adjusted padding */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 12px; /* Small font size for dropdown links */
+            border-radius: 8px; /* Rounded corners for links */
+        }
+
+        /* Hover effect on dropdown links */
+        .dropdown-content a:hover {
+            background-color: #437375; /* Hover background */
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+         /* Style for the floating WhatsApp button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      cursor: pointer;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+      width: 50%;
+      height: 50%;
+    } 
+        section {
+            padding: 20px;
+        }
+        h2 {
+    color: #006171; /* Color for h2 */
+    text-align: center;
+    margin-bottom: 30px; /* Adds space below the heading */
       }
+
+     h3 {
+    color: #000000; /* Color for h3 */
+    text-align: center;
+    margin-bottom: 30px; /* Adds space below the heading */
+       } 
+       
+       .carousel {
+      width: 80%; /* Adjust to desired carousel width */
+      max-width: 500px; /* Optional: Limit the maximum width */
+      overflow: hidden;
+      position: relative;
+      margin: auto;
+      align-items: center;
+      border: 3px solid #006171; /* Add border around the carousel */
+      border-radius: 10px; /* Optional: Add rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      background-color: #fff; /* Optional: Add a background color */
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+      width: 100%; /* Each image takes up the full width of the carousel */
+      flex-shrink: 0;
+    }
+ 
+     button {
+            background-color: #437375;
+            color: white;
+            padding: 10px 20px;
+            border: center;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 50px; /* Adds 2 lines of space below the heading */
+        }
+        button:hover {
+            background-color: #006171;
+        }
+        footer {
+            background-color: #006171;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            width: auto;
+        }
+         /* Style for the scroll-up button */
+    #scrollUpButton {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      display: none;
+      width: 50px;
+      height: 50px;
+      background-color: #006171;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      transition: background-color 0.3s;
+    }
+
+    #scrollUpButton:hover {
+      background-color: #437375;
+    }
+        iframe {
+            width: 100%;
+            height: 300px;
+             margin-bottom: 40px;
+             border-radius: 8px; /* Optional: rounded corners for the iframe */
+             border: 2px solid #006171; /* Dark Teal border color */
+             
+        }
+        .info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    margin-bottom: 3%;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.info-section div {
+    width: 30%;
+    background-color: rgba(250, 247, 244, 0.8); /* Semi-transparent background for each info block */
+    padding: 20px;
+    border: 1px solid rgba(203, 133, 124, 0.7); /* Slightly transparent border */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners for each info block */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for each info block */
+}
+
+.info-section div button {
+    display: block;
+    margin: auto;
+}
+
+ 
+    @media only screen and (max-width: 768px) {
+        header {
+            background-color: #006171;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+        }
+        header img {
+            width: 70px;
+            border-radius: 50%;
+             
+        }
+        nav {
+            background-color: #437375;
+            padding: 8px;
+            text-align: center;
+            
+        }
+        nav a {
+            color: white;
+            margin: 0 1px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            padding: 5px 5px;
+        }
+        nav a:hover {
+            color:  #000000;
+        }
+          /* Dropdown container */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Clickable link for dropdown */
+        .dropdown .dropdown-link {
+            cursor: pointer;
+            color: white;
+            padding: 5px 5px; /* Padding remains the same */
+            font-weight: bold; /* Bold text */
+            font-size: 13px; /* Small font size for dropdown link */
+            text-decoration: none;
+        }
+
+        /* Hover effect on dropdown link */
+        .dropdown .dropdown-link:hover {
+            color: #000000; /* Black on hover */
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+             
+            background-color: #006171; /* Background color */
+            min-width: 170px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            z-index: 1;
+            padding: 5px 0;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 5px 10px; /* Adjusted padding */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 13px; /* Small font size for dropdown links */
+            border-radius: 8px; /* Rounded corners for links */
+        }
+
+        /* Hover effect on dropdown links */
+        .dropdown-content a:hover {
+            background-color: #437375; /* Hover background */
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+         /* Style for the floating WhatsApp button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      cursor: pointer;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+      width: 50%;
+      height: 50%;
+    }
+        section {
+            padding: 10px;
+            font-size: 13px;
+        }
+        h2 {
+    color: #006171; /* Color for h2 */
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 10px; /* Adds space below the heading */
+      }
+
+     h3 {
+    color: #000000; /* Color for h3 */
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 10px; /* Adds space below the heading */
+       } 
+       
+       .carousel {
+      width: 70%; /* Adjust to desired carousel width */
+      max-width: 400px; /* Optional: Limit the maximum width */
+      overflow: hidden;
+      position: relative;
+      margin: auto;
+      align-items: center;
+      border: 3px solid #006171; /* Add border around the carousel */
+      border-radius: 10px; /* Optional: Add rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      background-color: #fff; /* Optional: Add a background color */
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+      width: 100%; /* Each image takes up the full width of the carousel */
+      flex-shrink: 0;
+    }
+        
+        button {
+            background-color: #437375;
+            color: white;
+            padding: 5px 10px;
+            border: center;
+            font-size: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px; /* Adds 2 lines of space below the heading */
+        }
+        button:hover {
+            background-color: #006171;
+        }
+        footer {
+            background-color: #006171;
+            padding: 5px;
+            font-size: 10px;
+            text-align: center;
+            color: white;
+            width: auto;
+        }
+         /* Style for the scroll-up button */
+    #scrollUpButton {
+      position: fixed;
+      bottom: 70px;
+      right: 5px;
+      display: none;
+      width: 30px;
+      height: 30px;
+      background-color: #006171;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      transition: background-color 0.3s;
+    }
+
+    #scrollUpButton:hover {
+      background-color: #437375;
+    }
+        iframe {
+            width: 100%;
+            height: 150px;
+             margin-bottom: 30px;
+             border-radius: 8px; /* Optional: rounded corners for the iframe */
+             border: 2px solid #006171; /* Dark Teal border color */
+             
+        }
+        .info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.info-section div {
+    width: 25%;
+    background-color: rgba(250, 247, 244, 0.8); /* Semi-transparent background for each info block */
+    padding: 5px;
+    font-size: 8px;
+    border: 1px solid rgba(203, 133, 124, 0.7); /* Slightly transparent border */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners for each info block */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for each info block */
+}
+
+.info-section div button {
+    display: block;
+    margin: auto;
+}
+
+        
+ 
+    }
+     
     </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+</head>
+<body>
+    <header>  
+        <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/WhatsApp%20Image%202024-10-09%20at%2010.01.15%20PM.jpeg" alt="Akshara Logo">
+        <h1>AKSHARA  WORK  GROUPS</h1>
+        <p>Your trusted partner for comprehensive solutions</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+         <!-- Dropdown for Services -->
+    <div class="dropdown">
+        <a class="dropdown-link">Services</a>
+        <div class="dropdown-content">
+            <a href="biomass.html">Biomass Briquettes</a>
+            <a href="labor.html">Labor Management</a>
+            <a href="ambulance.html">Ambulance Service</a>
+            
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About us</a>
+    </nav>
+         <!-- WhatsApp Floating Button -->
+  <a
+  href="https://wa.me/918096234645"
+  target="_blank"
+  class="whatsapp-button"
+  title="Chat with us on WhatsApp"
+>
+   <img
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+    alt="WhatsApp"
+  />
+</a>
+    <section id="home">
+        <h2> WELCOME TO AKSHARA WORK GROUPS</h2>
+        <p>Welcome to Akshara Work Groups—your trusted partner for comprehensive solutions in three vital areas:</p>
+          
+             <li><strong>Labor Management:</strong> We streamline workforce operations, enhancing efficiency and productivity for businesses of all sizes.</li> 
+             <li><strong>Ambulance Service:</strong> Our 24/7 emergency ambulance service ensures rapid, reliable medical response when it matters most.</li>
+             <li><strong>Biomass Briquettes:</strong> We offer eco-friendly biomass briquettes, providing a sustainable energy alternative that reduces carbon footprints.</li>
+         
+    </section>
+
+    <section id="services">
+        <h2>WHY CHOOSE US?</h2>
+
+
+        <h3>Biomass Briquettes</h3>
+        <div class="carousel" id="carouselBiomass">
+            <div class="carousel-images">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/bb2.jpg" alt="Biomass Briquettes 1">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/bb3.jpg" alt="Biomass Briquettes 2">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/bb1.jpg" alt="Biomass Briquettes 3">
+            </div>
+        </div>
+        <div class="carousel-dots" id="carouselDotsBiomass"></div>
+        <p>Eco-friendly energy for a sustainable future. Our biomass briquettes are made from renewable materials, offering a cleaner,.</p>
+        </p> greener alternative to conventional fuels. Reduce emissions and lower energy costs with our efficient, high-quality briquettes.</p>
+         <button onclick="location.href='biomass.html'">Let's See</button>
+ 
+        <h3> Labor Management</h3>
+        <div class="carousel" id="carouselLabor">
+            <div class="carousel-images labor-carousel">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/lb2.jpg" alt="Labor Management 1">
+                <img src="https://assets.onecompiler.app/42y68y97m/434gj7m2u/WhatsApp%20Image%202024-12-29%20at%209.10.13%20PM.jpeg" alt="Labor Management 2">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/lb1.jpg" alt="Labor Management 3">
+            </div>
+            
+         </div>
+        <div class="carousel-dots" id="carouselDotsLabor"></div>
+        <p>Boost efficiency, reduce costs, and manage your workforce effortlessly, Our labor management system offers seamless solutions </p>
+        </p>for tracking attendance, scheduling shifts, and monitoring performance, helping you optimize operations and improve productivity.</p>
+        <button onclick="location.href='labor.html'">Let's See</button>
+ 
+  
+        <h3> Ambulance Service</h3>
+        <div class="carousel" id="carouselAmbulance">
+            <div class="carousel-images">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/am2.jpg" alt="Ambulance Service 1">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/am3.jpg" alt="Ambulance Service 2">
+                <img src="https://assets.onecompiler.app/42ucesb3u/42umphu8t/am1.webp" alt="Ambulance Service 3">
+            </div>
+        </div>
+        <div class="carousel-dots" id="carouselDotsAmbulance"></div>
+        <p>Rapid response, reliable care, anytime. Our 24/7 ambulance service is equipped with cutting-edge medical </p>
+        </p> equipment and skilled professionals, ensuring timely medical support when it matters the most.</p>
+        <button onclick="location.href='ambulance.html'">Let's See</button>
+
+        
+    </section>
+
+    
+    
+    <section id=" LOCATION">
+       <h2> LOCATION</h2>
+        <p>148/A/1, Bureddipalle, Jadcherla, Telangana 509301</p>
+        <iframe src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.401525176809!2d78.12029089383329!3d16.75882164435648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bca31d2f7cb5995%3A0x98ddab1f2a823d1f!2sAkshara%20Work%20Groups!5e0!3m2!1sen!2sin!4v1735456969967!5m2!1sen!2sin"> </iframe>
+        <h2>ESSENTIALS</h2>
+        <div class="info-section">
+    
+        <div id="privacy">
+            <h2>Privacy Policy</h2>
+            <p> We prioritize your privacy & protect your personal information.</p>
+             
+            <button onclick="location.href='privacy.html'">⋙</button>
+        </div>
+        <div id="faq">
+            <h2>FAQ</h2>
+            <p>Find answers to common questions regarding our services, policies, & more.</p>
+            
+            <button onclick="location.href='faq.html'">⋙</button>
+  </div>
+        <div id="terms">
+            <h2>Terms And Conditions</h2>
+            <p>Review the terms & conditions of using.</p>
+             
+            <button onclick="location.href='terms.html'">⋙</button> 
+    </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Aksshara Work Groups. All Rights Reserved.</p>
+        <p style="color: white;">Powered by <a href="https://www.instagram.com/vspaze_technologies?igsh=MWR3cnBpOGdpYnRyeA==" target="_blank" style="color: white; text-decoration: none;">vspaze technologies</a></p>
+    </footer>
+       <!-- Scroll-Up Button -->
+  <button id="scrollUpButton" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+function initCarousel(carouselId, direction = 'left') {
+    const carousel = document.querySelector(`#${carouselId} .carousel-images`);
+    let currentIndex = direction === 'right' ? 0 : carousel.children.length - 1; // Start from the last slide for left to right and from first slide for right to left
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+    function autoSlide() {
+        const totalSlides = carousel.children.length;
+
+        if (direction === 'right') {
+            // Move right (forward) from left to right
+            currentIndex = (currentIndex + 1) % totalSlides;
+        } else {
+            // Move left (backward) from right to left
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         }
-      });
-    </script>
-  </body>
+
+        const offset = -currentIndex * 100;
+        carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    setInterval(autoSlide, 3000);
+}     
+
+// Initialize carousels with respective directions
+initCarousel('carouselBiomass', 'left');    // Biomass slides right to left
+initCarousel('carouselLabor', 'right');       // Labor Services slides left to right
+initCarousel('carouselAmbulance', 'left');  // Ambulance Services slides right to left
+ 
+ 
+           // Get the button
+    const scrollUpButton = document.getElementById('scrollUpButton');
+
+// Show the button when scrolling down 100px from the top
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollUpButton.style.display = 'flex';
+  } else {
+    scrollUpButton.style.display = 'none';
+  }
+};
+
+// Slow scroll to the top when the button is clicked
+scrollUpButton.onclick = function() {
+  const scrollToTop = () => {
+    const position = document.documentElement.scrollTop || document.body.scrollTop;
+    if (position > 0) {
+      window.scrollBy(0, -20); // Adjust this value to control the scrolling speed
+      requestAnimationFrame(scrollToTop);
+    }
+  };
+  scrollToTop();
+};
+
+</script>
+</body>
 </html>
+ 
