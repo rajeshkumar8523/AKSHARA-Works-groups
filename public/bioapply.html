@@ -479,6 +479,7 @@
     alt="WhatsApp"
   />
 </a>
+<<<<<<< HEAD
  <!-- Form Container -->
     <div class="form-container">
         <h2>Biomass Briquettes Services</h2>
@@ -562,6 +563,51 @@ document.getElementById("your-form").addEventListener("submit", handleSubmit);
 
      
                         // Get the button
+=======
+<div class="form-container">
+    <h2>Biomass Briquettes Services</h2>
+    <p style=" text-align:center; margin-bottom:10%;">Application Form</p>
+    <form action="submit_application.html" method="POST">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+    </form>
+</div>
+    <footer>
+        <p>&copy; 2024 Aksshara Work Groups. All Rights Reserved.</p>
+        <p style="color: white;">Powered by <a href="https://www.instagram.com/vspaze_technologies?igsh=MWR3cnBpOGdpYnRyeA==" target="_blank" style="color: white; text-decoration: none;">vspaze technologies</a></p>
+
+    </footer>
+     <!-- Scroll-Up Button -->
+  <button id="scrollUpButton" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script>
+                   // Get the button
+>>>>>>> 9de4d9ec5b74b592ab911642b7038e5fd353e752
     const scrollUpButton = document.getElementById('scrollUpButton');
 
 // Show the button when scrolling down 100px from the top
