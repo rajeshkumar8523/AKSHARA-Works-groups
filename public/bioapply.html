@@ -481,115 +481,115 @@
 </a>
  
  <!-- Form Container -->
-    <div class="form-container">
-        <h2>Biomass Briquettes Services</h2>
-        <p style="text-align:center; margin-bottom:10%;">Application Form</p>
+ <div class="form-container">
+    <h2>Biomass Briquettes Services</h2>
+    <p style="text-align:center; margin-bottom:10%;">Application Form</p>
 
-        <form id="your-form">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-            </div>
+    <form id="your-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
 
-            <div class="form-group">
-                <label for="email">Email ID:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
+        <div class="form-group">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
 
-            <div class="form-group">
-                <label for="contact">Contact Number:</label>
-                <input type="tel" id="number" name="number" placeholder="Enter your contact number" required>
-            </div>
+        <div class="form-group">
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+        </div>
 
-            <div class="form-group">
-                <label for="address">Address:</label>
-                <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
-            </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+        </div>
 
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
-            </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+        </div>
 
-            <div class="form-group">
-                <button type="submit" class="submit-btn">Submit</button>
-            </div>
-        </form>
+        <div class="form-group">
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+    </form>
 
-        <p id="form-message"></p>
-    </div>
+    <p id="form-message"></p>
+</div>
 
-    <footer>
-        <p>&copy; 2024 Aksshara Work Groups. All Rights Reserved.</p>
-        <p>Powered by <a href="https://www.instagram.com/vspaze_technologies?igsh=MWR3cnBpOGdpYnRyeA==" target="_blank" style="color: white; text-decoration: none;">Vspaze Technologies</a></p>
-    </footer>
- <!-- Scroll-Up Button -->
- <button id="scrollUpButton" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+<footer>
+    <p>&copy; 2024 Aksshara Work Groups. All Rights Reserved.</p>
+    <p>Powered by <a href="https://www.instagram.com/vspaze_technologies?igsh=MWR3cnBpOGdpYnRyeA==" target="_blank" style="color: white; text-decoration: none;">Vspaze Technologies</a></p>
+</footer>
 
- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
- <script>
-     emailjs.init("NxEnNcbvDGC3SzlJi"); // Replace with your actual public key
- 
-     async function handleSubmit(event) {
-         event.preventDefault(); // Prevents the form from refreshing
- 
-         const formData = {
-             name: document.getElementById("name").value,
-             email: document.getElementById("email").value,
-             contact: document.getElementById("number").value,
-             address: document.getElementById("address").value,
-             message: document.getElementById("message").value,
-         };
- 
-         const emailData = {
-             to_name: "Aksshara Work Groups",
-             from_name: formData.name,
-             user_email: formData.email,  // Ensure this matches EmailJS template variables
-             contact: formData.contact,
-             address: formData.address,
-             message: formData.message,
-         };
- 
-         emailjs.send("service_u4kehv8", "template_aw7vf9b", emailData)
-             .then((response) => {
-                 console.log("SUCCESS!", response.status, response.text);
-                 document.getElementById("form-message").innerText = "Form submitted successfully!";
-             })
-             .catch((err) => {
-                 console.error("FAILED...", err);
-                 document.getElementById("form-message").innerText = "Submission failed, please try again.";
-             });
-     }
- 
-     document.getElementById("your-form").addEventListener("submit", handleSubmit);
- 
- 
+<!-- Scroll-Up Button -->
+<button id="scrollUpButton" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    
+</body>
 
-      // Get the button
- 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    emailjs.init("NxEnNcbvDGC3SzlJi"); // Replace with your actual public key
+
+    async function handleSubmit(event) {
+        event.preventDefault(); // Prevents the form from refreshing
+
+        const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            contact: document.getElementById("contact").value,
+            address: document.getElementById("address").value,
+            message: document.getElementById("message").value,
+        };
+
+        const emailData = {
+            to_name: "Aksshara Work Groups",
+            from_name: formData.name,
+            name: formData.name,       // Matches {{name}} in the template
+            email: formData.email,     // Matches {{email}} in the template
+            contact: formData.contact, // Matches {{contact}} in the template
+            address: formData.address, // Matches {{address}} in the template
+            message: formData.message, // Matches {{message}} in the template
+        };
+
+        emailjs.send("service_u4kehv8", "template_aw7vf9b", emailData)
+            .then((response) => {
+                console.log("SUCCESS!", response.status, response.text);
+                document.getElementById("form-message").innerText = "Form submitted successfully!";
+                document.getElementById("your-form").reset(); // Clear the form fields after success
+            })
+            .catch((err) => {
+                console.error("FAILED...", err);
+                document.getElementById("form-message").innerText = "Submission failed, please try again.";
+            });
+    }
+
+    document.getElementById("your-form").addEventListener("submit", handleSubmit);
+
+    // Scroll-Up Button Functionality
     const scrollUpButton = document.getElementById('scrollUpButton');
 
-// Show the button when scrolling down 100px from the top
-window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    scrollUpButton.style.display = 'flex';
-  } else {
-    scrollUpButton.style.display = 'none';
-  }
-};
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollUpButton.style.display = 'flex';
+        } else {
+            scrollUpButton.style.display = 'none';
+        }
+    };
 
-// Slow scroll to the top when the button is clicked
-scrollUpButton.onclick = function() {
-  const scrollToTop = () => {
-    const position = document.documentElement.scrollTop || document.body.scrollTop;
-    if (position > 0) {
-      window.scrollBy(0, -20); // Adjust this value to control the scrolling speed
-      requestAnimationFrame(scrollToTop);
-    }
-  };
-  scrollToTop();
+    scrollUpButton.onclick = function() {
+        const scrollToTop = () => {
+            const position = document.documentElement.scrollTop || document.body.scrollTop;
+            if (position > 0) {
+                window.scrollBy(0, -20);
+                requestAnimationFrame(scrollToTop);
+            }
+        };
+        scrollToTop();
+    };
+</script>
 
-};
-    </script>
 </body>
 </html>
